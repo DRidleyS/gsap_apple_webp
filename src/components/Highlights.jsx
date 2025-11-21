@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Highlights = () => {
-  const isMobile = useMediaQuery({ query: "max-width: 1024px" });
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
   useGSAP(() => {
     gsap.to([".left-column", ".right-column"], {
