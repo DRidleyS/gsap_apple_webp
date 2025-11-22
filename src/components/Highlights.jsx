@@ -1,6 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { getAssetPath } from "../utils/assetPath";
 
 const Highlights = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -25,11 +26,11 @@ const Highlights = () => {
       <div className="masonry">
         <div className="left-column">
           <div>
-            <img src="/laptop.png" alt="laptop" />
+            <img src={getAssetPath("/laptop.png")} alt="laptop" />
             <p>Fly through demanding tasks up to 9.8x faster.</p>
           </div>
           <div>
-            <img src="/sun.png" alt="sun" />
+            <img src={getAssetPath("/sun.png")} alt="sun" />
             <p>
               A stunning <br /> Liquid Retina XDR <br /> display.
             </p>
@@ -37,13 +38,13 @@ const Highlights = () => {
         </div>
         <div className="right-column">
           <div className="apple-gradient">
-            <img src="/ai.png" alt="AI" />
+            <img src={getAssetPath("/ai.png")} alt="AI" />
             <p>
               Built for <br /> <span>Apple Intelligence.</span>
             </p>
           </div>
           <div>
-            <img src="/battery.png" alt="Battery" />
+            <img src={getAssetPath("/battery.png")} alt="Battery" />
             <p>
               Up to <br />{" "}
               <span className="green-gradient"> 14 more hours </span> battery

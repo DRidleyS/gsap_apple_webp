@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { getAssetPath } from "../utils/assetPath";
 
 const Hero = () => {
   const videoRef = useRef();
@@ -10,10 +11,16 @@ const Hero = () => {
     <section id="hero">
       <div>
         <h1>Macbook Pro</h1>
-        <img src="/title.png" alt="Macbook Title" />
+        <img src={getAssetPath("/title.png")} alt="Macbook Title" />
       </div>
 
-      <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
+      <video
+        ref={videoRef}
+        src={getAssetPath("/videos/hero.mp4")}
+        autoPlay
+        muted
+        playsInline
+      />
 
       <button>Buy</button>
 

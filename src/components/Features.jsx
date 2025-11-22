@@ -10,6 +10,7 @@ import useMacbookStore from "../store/index.js";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { featureSequence } from "../constants/index.js";
+import { getAssetPath } from "../utils/assetPath";
 
 const ModelScroll = () => {
   const groupRef = useRef(null);
@@ -58,19 +59,19 @@ const ModelScroll = () => {
     }
 
     timeline
-      .call(() => setTexture("/videos/feature-1.mp4"))
+      .call(() => setTexture(getAssetPath("/videos/feature-1.mp4")))
       .to(".box1", { opacity: 1, y: 0, delay: 1 })
 
-      .call(() => setTexture("/videos/feature-2.mp4"))
+      .call(() => setTexture(getAssetPath("/videos/feature-2.mp4")))
       .to(".box2", { opacity: 1, y: 0 })
 
-      .call(() => setTexture("/videos/feature-3.mp4"))
+      .call(() => setTexture(getAssetPath("/videos/feature-3.mp4")))
       .to(".box3", { opacity: 1, y: 0 })
 
-      .call(() => setTexture("/videos/feature-4.mp4"))
+      .call(() => setTexture(getAssetPath("/videos/feature-4.mp4")))
       .to(".box4", { opacity: 1, y: 0 })
 
-      .call(() => setTexture("/videos/feature-5.mp4"))
+      .call(() => setTexture(getAssetPath("/videos/feature-5.mp4")))
       .to(".box5", { opacity: 1, y: 0 });
   }, []);
   return (

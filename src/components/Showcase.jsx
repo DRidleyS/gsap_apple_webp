@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
+import { getAssetPath } from "../utils/assetPath";
 
 const Showcase = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -26,9 +27,15 @@ const Showcase = () => {
   return (
     <section id="showcase">
       <div className="media">
-        <video src="/videos/game.mp4" loop muted autoPlay playsInline />
+        <video
+          src={getAssetPath("/videos/game.mp4")}
+          loop
+          muted
+          autoPlay
+          playsInline
+        />
         <div className="mask">
-          <img src="/mask-logo.svg" alt="Mask logo overlay" />
+          <img src={getAssetPath("/mask-logo.svg")} alt="Mask logo overlay" />
         </div>
       </div>
       <div className="content">

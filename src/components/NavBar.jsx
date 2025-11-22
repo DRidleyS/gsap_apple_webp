@@ -1,10 +1,11 @@
 import { navLinks } from "../constants";
+import { getAssetPath } from "../utils/assetPath";
 
 const NavBar = () => {
   return (
     <header>
       <nav>
-        <img src="/logo.svg" alt="Apple Logo" />
+        <img src={getAssetPath("/logo.svg")} alt="Apple Logo" />
 
         <ul>
           {navLinks.map(({ label }) => (
@@ -16,10 +17,10 @@ const NavBar = () => {
 
         <div className="flex-center gap-3">
           <button>
-            <img src="/search.svg" alt="Search" />
+            <img src={getAssetPath("/search.svg")} alt="Search" />
           </button>
           <button>
-            <img src="/cart.svg" alt="Cart" />
+            <img src={getAssetPath("/cart.svg")} alt="Cart" />
           </button>
         </div>
       </nav>
