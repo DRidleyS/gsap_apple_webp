@@ -18,7 +18,8 @@ const ProductViewer = () => {
 
       <div className="controls">
         <p className="info">
-          Macbook Pro {scale} in {color}
+          Macbook Pro {scale === 0.06 ? '14"' : '16"'} in{" "}
+          {color === "#2e2c2e" ? "Space Black" : "Silver"}
         </p>
         <div className="flex-center gap-5 mt-5">
           <div className="color-control">
